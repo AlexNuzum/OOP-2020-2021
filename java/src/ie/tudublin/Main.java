@@ -1,30 +1,32 @@
 package ie.tudublin;
 
-public class Main
-{
-    public static void main(String[] args)
-    {
-        System.out.println("Hello world");
+public class Main {
+	public static void main(String[] args) {
+		System.out.println("Hello world");
 
-        Animal misty = new Dog("Misty");
+		Animal misty = new Dog("Misty");
 
-        Animal topCat = new Cat("TopCat");
+		Animal topCat = new Cat("TopCat");
 
-        System.out.println(misty);
-        System.out.println(topCat);
+		System.out.println(misty);
+		System.out.println(topCat);
 
-        misty = topCat;
+		misty = topCat;
 
-        topCat.setName("Garfield");
+		topCat.setName("Garfield");
+		
+		Cat ginger = new Cat("Ginger");
+		while(ginger.getLives() > 0) {
+			ginger.kill();
+		}
+		ginger.kill();
 
-        System.out.println(misty);
-        System.out.println(topCat);
+		System.out.println(misty);
+		System.out.println(topCat);
 
-        // What will get printed out??
+		// What will get printed out??
 
-        // 1. topcat, Garfield
-        // 2. garfield, Garfield 
-
-
-    }
-} 
+		// 1. topcat, Garfield
+		// 2. garfield, Garfield 
+	}
+}
